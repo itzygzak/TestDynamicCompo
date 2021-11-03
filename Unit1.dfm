@@ -11,6 +11,80 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
+  object spltVw1: TSplitView
+    Left = 0
+    Top = 0
+    Width = 225
+    Height = 718
+    OpenedWidth = 200
+    Placement = svpLeft
+    TabOrder = 0
+    object grp1: TGroupBox
+      Left = 0
+      Top = 0
+      Width = 225
+      Height = 718
+      Align = alClient
+      TabOrder = 0
+      ExplicitLeft = 40
+      ExplicitTop = 80
+      ExplicitWidth = 185
+      ExplicitHeight = 105
+      object pnl1: TPanel
+        Left = 2
+        Top = 15
+        Width = 221
+        Height = 41
+        Align = alTop
+        BevelOuter = bvNone
+        Caption = 'pnl1'
+        TabOrder = 0
+        ExplicitLeft = 40
+        ExplicitTop = 128
+        ExplicitWidth = 185
+      end
+      object pnl2: TPanel
+        Left = 2
+        Top = 56
+        Width = 221
+        Height = 41
+        Align = alTop
+        BevelOuter = bvNone
+        Caption = 'pnl2'
+        TabOrder = 1
+        ExplicitLeft = 32
+        ExplicitTop = 208
+        ExplicitWidth = 185
+      end
+      object pnl3: TPanel
+        Left = 2
+        Top = 97
+        Width = 221
+        Height = 41
+        Align = alTop
+        BevelOuter = bvNone
+        Caption = 'pnl3'
+        TabOrder = 2
+        ExplicitLeft = 32
+        ExplicitTop = 280
+        ExplicitWidth = 185
+      end
+      object pnl4: TPanel
+        Left = 2
+        Top = 675
+        Width = 221
+        Height = 41
+        Align = alBottom
+        BevelOuter = bvNone
+        Caption = 'pnl4'
+        TabOrder = 3
+        ExplicitLeft = 32
+        ExplicitTop = 352
+        ExplicitWidth = 185
+      end
+    end
+  end
 end

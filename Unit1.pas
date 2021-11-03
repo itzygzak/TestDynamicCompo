@@ -22,6 +22,9 @@ type
     procedure pnl1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure pnl2MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure pnl3MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+    procedure pnl1Click(Sender: TObject);
+    procedure pnl2Click(Sender: TObject);
+    procedure Zamknij(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,10 +33,18 @@ type
 
 var
   Form1: TForm1;
+  DynamicForm : TForm;
 
 implementation
+uses Unit2, Unit3;
 
 {$R *.dfm}
+
+procedure TForm1.Zamknij(Sender: TObject);
+begin
+//Action:=caFree;
+//DynamicForm:=nil;
+end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
@@ -54,6 +65,23 @@ Pnl3.Font.Size:=12;
 Pnl4.Color:=rgb(37,38,40);
 Pnl4.Font.Color:=clWhite;
 Pnl4.Font.Size:=12;
+end;
+
+
+procedure TForm1.pnl1Click(Sender: TObject);
+//var DynamicForm : TForm;
+begin
+//Form2.Show;
+    DynamicForm:=TForm.Create(Application);//(Self);
+
+    DynamicForm.Caption :='Forma dynamiczna';
+    DynamicForm.Parent := Self;
+    DynamicForm.Name := 'Dynamic';
+    DynamicForm.FormStyle := fsMDIChild;
+    //DynamicForm.Visible:=True;
+    //DynamicForm.Align := alTop;
+    //DynamicForm.AutoSize:=True;
+
 
 end;
 
@@ -66,6 +94,17 @@ procedure TForm1.pnl1MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
 Pnl1.Color:=rgb(182,186,181);
+end;
+
+procedure TForm1.pnl2Click(Sender: TObject);
+begin
+//Form2.Show;
+Form2 := TForm2.Create(Self);
+try
+ Form2.Show;
+finally
+ Form2.Free;
+end;
 end;
 
 procedure TForm1.pnl2MouseLeave(Sender: TObject);

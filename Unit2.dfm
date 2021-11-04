@@ -2,9 +2,11 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'Form2'
-  ClientHeight = 442
-  ClientWidth = 837
+  ClientHeight = 403
+  ClientWidth = 821
   Color = clBtnFace
+  Constraints.MaxHeight = 442
+  Constraints.MaxWidth = 837
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -14,6 +16,7 @@ object Form2: TForm2
   OldCreateOrder = False
   Position = poDefault
   PrintScale = poNone
+  Visible = True
   OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13

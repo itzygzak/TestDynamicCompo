@@ -70,6 +70,7 @@ object Form1: TForm1
         Caption = 'Uczestnicy'
         ParentBackground = False
         TabOrder = 2
+        OnClick = pnl3Click
         OnMouseLeave = pnl3MouseLeave
         OnMouseMove = pnl3MouseMove
       end

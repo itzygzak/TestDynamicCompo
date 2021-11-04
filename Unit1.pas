@@ -25,6 +25,7 @@ type
     procedure pnl1Click(Sender: TObject);
     procedure pnl2Click(Sender: TObject);
     procedure Zamknij(Sender: TObject);
+    procedure pnl3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -99,12 +100,16 @@ end;
 procedure TForm1.pnl2Click(Sender: TObject);
 begin
 //Form2.Show;
-Form2 := TForm2.Create(Self);
+Form2 := TForm2.Create(Application);
+ManualDock(Form2);
+{Form2.Parent:=self;
+Form2.FormStyle:=fsMDIChild;
 try
  Form2.Show;
+
 finally
- Form2.Free;
-end;
+ //Form2.Free;
+end;           }
 end;
 
 procedure TForm1.pnl2MouseLeave(Sender: TObject);
@@ -116,6 +121,15 @@ procedure TForm1.pnl2MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
 Pnl2.Color:=rgb(182,186,181);
+end;
+
+procedure TForm1.pnl3Click(Sender: TObject);
+begin
+   with TForm2.Create(Application) do
+  begin
+    ManualDock(Form2);//(PageControl1);
+   // Caption := Format('Nowa forma nr %d', []);//[PageControl1.PageCount]);
+  end;
 end;
 
 procedure TForm1.pnl3MouseLeave(Sender: TObject);

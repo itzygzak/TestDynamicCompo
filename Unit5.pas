@@ -1,4 +1,4 @@
-unit Unit3;
+unit Unit5;
 
 interface
 
@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
 
 type
-  TForm3 = class(TForm)
+  TForm5 = class(TForm)
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
@@ -16,16 +16,16 @@ type
   end;
 
 var
-  Form3: TForm3;
+  Form5: TForm5;
 
 implementation
 
 {$R *.dfm}
 
-procedure TForm3.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TForm5.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
 Action:=caFree;
-Form3:=nil;
+Form5:=nil;
 end;
 
 end.

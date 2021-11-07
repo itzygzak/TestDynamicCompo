@@ -59,6 +59,7 @@ object Form1: TForm1
         OnClick = pnl2Click
         OnMouseLeave = pnl2MouseLeave
         OnMouseMove = pnl2MouseMove
+        ExplicitTop = 50
       end
       object pnl3: TPanel
         Left = 2
@@ -84,6 +85,7 @@ object Form1: TForm1
         Caption = 'Koniec pracy'
         ParentBackground = False
         TabOrder = 3
+        OnClick = pnl4Click
       end
     end
   end

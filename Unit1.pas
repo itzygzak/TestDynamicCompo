@@ -26,6 +26,7 @@ type
     procedure pnl2Click(Sender: TObject);
     procedure Zamknij(Sender: TObject);
     procedure pnl3Click(Sender: TObject);
+    procedure pnl4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,7 +38,7 @@ var
   DynamicForm : TForm;
 
 implementation
-uses Unit2, Unit3;
+uses Unit2, Unit3, Unit5;
 
 {$R *.dfm}
 
@@ -72,16 +73,14 @@ end;
 procedure TForm1.pnl1Click(Sender: TObject);
 //var DynamicForm : TForm;
 begin
-//Form2.Show;
-    DynamicForm:=TForm.Create(Application);//(Self);
+Form2:=TForm2.Create(Application);
+Form2.Show;
+{    DynamicForm:=TForm.Create(Application);//(Self);
 
     DynamicForm.Caption :='Forma dynamiczna';
     DynamicForm.Parent := Self;
     DynamicForm.Name := 'Dynamic';
-    DynamicForm.FormStyle := fsMDIChild;
-    //DynamicForm.Visible:=True;
-    //DynamicForm.Align := alTop;
-    //DynamicForm.AutoSize:=True;
+    DynamicForm.FormStyle := fsMDIChild; }
 
 
 end;
@@ -99,17 +98,9 @@ end;
 
 procedure TForm1.pnl2Click(Sender: TObject);
 begin
-//Form2.Show;
-Form2 := TForm2.Create(Application);
-ManualDock(Form2);
-{Form2.Parent:=self;
-Form2.FormStyle:=fsMDIChild;
-try
- Form2.Show;
-
-finally
- //Form2.Free;
-end;           }
+Form3 := TForm3.Create(Application);
+Form3.Show;
+//ManualDock(Form3);
 end;
 
 procedure TForm1.pnl2MouseLeave(Sender: TObject);
@@ -125,11 +116,12 @@ end;
 
 procedure TForm1.pnl3Click(Sender: TObject);
 begin
-   with TForm2.Create(Application) do
+Form5:=TForm5.Create(Application);
+Form5.show;
+{   with TForm2.Create(Application) do
   begin
-    ManualDock(Form2);//(PageControl1);
-   // Caption := Format('Nowa forma nr %d', [Form2.
-  end;
+    ManualDock(Form2);
+  end;                }
 end;
 
 procedure TForm1.pnl3MouseLeave(Sender: TObject);
@@ -141,6 +133,11 @@ procedure TForm1.pnl3MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
 Pnl3.Color:=rgb(182,186,181);
+end;
+
+procedure TForm1.pnl4Click(Sender: TObject);
+begin
+Application.Terminate;
 end;
 
 //Przyk³ad dokowania dla dokumentu oraz oddokowania. Przyk³ad z netu

@@ -2,9 +2,11 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 718
-  ClientWidth = 1099
+  ClientHeight = 679
+  ClientWidth = 1083
   Color = clBtnFace
+  Constraints.MinHeight = 718
+  Constraints.MinWidth = 1099
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -20,18 +22,20 @@ object Form1: TForm1
     Left = 0
     Top = 0
     Width = 200
-    Height = 718
+    Height = 679
     OpenedWidth = 200
     Placement = svpLeft
     TabOrder = 0
+    ExplicitHeight = 718
     object grp1: TGroupBox
       Left = 0
       Top = 0
       Width = 200
-      Height = 718
+      Height = 679
       Align = alClient
       ParentBackground = False
       TabOrder = 0
+      ExplicitHeight = 718
       object pnl1: TPanel
         Left = 2
         Top = 15
@@ -59,7 +63,6 @@ object Form1: TForm1
         OnClick = pnl2Click
         OnMouseLeave = pnl2MouseLeave
         OnMouseMove = pnl2MouseMove
-        ExplicitTop = 50
       end
       object pnl3: TPanel
         Left = 2
@@ -77,7 +80,7 @@ object Form1: TForm1
       end
       object pnl4: TPanel
         Left = 2
-        Top = 675
+        Top = 636
         Width = 196
         Height = 41
         Align = alBottom
@@ -86,7 +89,32 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 3
         OnClick = pnl4Click
+        ExplicitTop = 675
+      end
+      object pnl5: TPanel
+        Left = 2
+        Top = 138
+        Width = 196
+        Height = 41
+        Align = alTop
+        BevelOuter = bvNone
+        Caption = 'Forma Dock'
+        TabOrder = 4
+        OnClick = pnl5Click
+        ExplicitLeft = 48
+        ExplicitTop = 200
+        ExplicitWidth = 185
       end
     end
+  end
+  object pnl6: TPanel
+    Left = 392
+    Top = 8
+    Width = 561
+    Height = 586
+    Caption = 'pnl6'
+    ParentBackground = False
+    TabOrder = 1
+    StyleElements = []
   end
 end

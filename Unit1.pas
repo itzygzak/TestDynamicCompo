@@ -15,6 +15,8 @@ type
     pnl2: TPanel;
     pnl3: TPanel;
     pnl4: TPanel;
+    pnl5: TPanel;
+    pnl6: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure pnl1MouseLeave(Sender: TObject);
     procedure pnl2MouseLeave(Sender: TObject);
@@ -27,6 +29,9 @@ type
     procedure Zamknij(Sender: TObject);
     procedure pnl3Click(Sender: TObject);
     procedure pnl4Click(Sender: TObject);
+    procedure pnl5Click(Sender: TObject);
+    procedure NewForm(InstanceClass :TComponentClass; var Reference);
+
   private
     { Private declarations }
   public
@@ -38,7 +43,7 @@ var
   DynamicForm : TForm;
 
 implementation
-uses Unit2, Unit3, Unit5;
+uses Unit2, Unit3, Unit5, Unit6;
 
 {$R *.dfm}
 
@@ -47,6 +52,7 @@ begin
 //Action:=caFree;
 //DynamicForm:=nil;
 end;
+
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
@@ -67,14 +73,31 @@ Pnl3.Font.Size:=12;
 Pnl4.Color:=rgb(37,38,40);
 Pnl4.Font.Color:=clWhite;
 Pnl4.Font.Size:=12;
+
+Pnl5.Color:=rgb(37,38,40);
+Pnl5.Font.Color:=clWhite;
+Pnl5.Font.Size:=12;
 end;
 
+
+procedure TForm1.NewForm(InstanceClass: TComponentClass; var Reference);
+var i : Integer;
+begin
+  for i:= 0 to MDIChildCount -1 do
+    if MDIChildren[i] is InstanceClass  then
+      begin
+        MDIChildren[i].Show;
+        MDIChildren[i].WindowState := wsMaximized;
+        Exit;
+      end;
+  Application.CreateForm(InstanceClass,Reference);
+end;
 
 procedure TForm1.pnl1Click(Sender: TObject);
 //var DynamicForm : TForm;
 begin
 Form2:=TForm2.Create(Application);
-Form2.Show;
+NewForm(TForm2,Form2);
 {    DynamicForm:=TForm.Create(Application);//(Self);
 
     DynamicForm.Caption :='Forma dynamiczna';
@@ -98,7 +121,8 @@ end;
 
 procedure TForm1.pnl2Click(Sender: TObject);
 begin
-Form3 := TForm3.Create(Application);
+//Form3 := TForm3.Create(Application);
+Form3 := TForm3.Create(Self);
 Form3.Show;
 //ManualDock(Form3);
 end;
@@ -138,6 +162,15 @@ end;
 procedure TForm1.pnl4Click(Sender: TObject);
 begin
 Application.Terminate;
+end;
+
+procedure TForm1.pnl5Click(Sender: TObject);
+begin
+with TForm6.Create(Application) do
+begin
+ ManualDock(Form6);
+end;
+
 end;
 
 //Przyk³ad dokowania dla dokumentu oraz oddokowania. Przyk³ad z netu

@@ -15,9 +15,8 @@ object Form2: TForm2
   Font.Style = []
   FormStyle = fsMDIChild
   OldCreateOrder = False
-  Position = poDefault
+  Position = poDesktopCenter
   PrintScale = poNone
-  Visible = True
   OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13

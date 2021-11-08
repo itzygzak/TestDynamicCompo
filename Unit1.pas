@@ -57,6 +57,7 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
 grp1.Color:=rgb(37,38,40);
+pnl6.Color:=RGB(37,38,40);
 
 Pnl1.Color:=rgb(37,38,40);
 Pnl1.Font.Color:=clWhite;
@@ -97,7 +98,8 @@ procedure TForm1.pnl1Click(Sender: TObject);
 //var DynamicForm : TForm;
 begin
 Form2:=TForm2.Create(Application);
-NewForm(TForm2,Form2);
+//NewForm(TForm2,Form2);
+Form2.Show;
 {    DynamicForm:=TForm.Create(Application);//(Self);
 
     DynamicForm.Caption :='Forma dynamiczna';
@@ -122,7 +124,7 @@ end;
 procedure TForm1.pnl2Click(Sender: TObject);
 begin
 //Form3 := TForm3.Create(Application);
-Form3 := TForm3.Create(Self);
+Form3 := TForm3.Create(Form1);
 Form3.Show;
 //ManualDock(Form3);
 end;

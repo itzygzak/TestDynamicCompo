@@ -16,4 +16,8 @@ object Form3: TForm3
   OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
+  object pm1: TPopupMenu
+    Left = 408
+    Top = 168
+  end
 end

@@ -1,9 +1,10 @@
 object Form1: TForm1
   Left = 0
   Top = 0
+  BorderStyle = bsNone
   Caption = 'Form1'
-  ClientHeight = 679
-  ClientWidth = 1083
+  ClientHeight = 718
+  ClientWidth = 1099
   Color = clBtnFace
   Constraints.MinHeight = 718
   Constraints.MinWidth = 1099
@@ -19,23 +20,26 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object spltVw1: TSplitView
-    Left = 0
-    Top = 0
+    AlignWithMargins = True
+    Left = 3
+    Top = 28
     Width = 200
-    Height = 679
+    Height = 687
     OpenedWidth = 200
     Placement = svpLeft
     TabOrder = 0
-    ExplicitHeight = 718
+    ExplicitLeft = 0
+    ExplicitTop = 25
+    ExplicitHeight = 654
     object grp1: TGroupBox
       Left = 0
       Top = 0
       Width = 200
-      Height = 679
+      Height = 687
       Align = alClient
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 718
+      ExplicitHeight = 654
       object pnl1: TPanel
         Left = 2
         Top = 15
@@ -80,7 +84,7 @@ object Form1: TForm1
       end
       object pnl4: TPanel
         Left = 2
-        Top = 636
+        Top = 644
         Width = 196
         Height = 41
         Align = alBottom
@@ -89,7 +93,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 3
         OnClick = pnl4Click
-        ExplicitTop = 675
+        ExplicitTop = 636
       end
       object pnl5: TPanel
         Left = 2
@@ -101,20 +105,21 @@ object Form1: TForm1
         Caption = 'Forma Dock'
         TabOrder = 4
         OnClick = pnl5Click
-        ExplicitLeft = 48
-        ExplicitTop = 200
-        ExplicitWidth = 185
       end
     end
   end
   object pnl6: TPanel
-    Left = 392
-    Top = 8
-    Width = 561
-    Height = 586
+    Left = 0
+    Top = 0
+    Width = 1099
+    Height = 25
+    Align = alTop
+    BevelOuter = bvNone
     Caption = 'pnl6'
     ParentBackground = False
     TabOrder = 1
     StyleElements = []
+    ExplicitTop = -6
+    ExplicitWidth = 1083
   end
 end

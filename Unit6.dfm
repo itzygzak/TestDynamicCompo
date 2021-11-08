@@ -12,6 +12,8 @@ object Form6: TForm6
   Font.Style = []
   FormStyle = fsMDIChild
   OldCreateOrder = False
+  PopupMenu = pm1
+  Visible = True
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -26,5 +28,13 @@ object Form6: TForm6
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
+  end
+  object pm1: TPopupMenu
+    Left = 704
+    Top = 184
+    object Zamknij1: TMenuItem
+      Caption = 'Zamknij'
+      OnClick = Zamknij1Click
+    end
   end
 end

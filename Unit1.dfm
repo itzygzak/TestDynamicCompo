@@ -28,9 +28,6 @@ object Form1: TForm1
     OpenedWidth = 200
     Placement = svpLeft
     TabOrder = 0
-    ExplicitLeft = 0
-    ExplicitTop = 25
-    ExplicitHeight = 654
     object grp1: TGroupBox
       Left = 0
       Top = 0
@@ -39,7 +36,6 @@ object Form1: TForm1
       Align = alClient
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 654
       object pnl1: TPanel
         Left = 2
         Top = 15
@@ -93,7 +89,6 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 3
         OnClick = pnl4Click
-        ExplicitTop = 636
       end
       object pnl5: TPanel
         Left = 2
@@ -119,7 +114,41 @@ object Form1: TForm1
     ParentBackground = False
     TabOrder = 1
     StyleElements = []
-    ExplicitTop = -6
-    ExplicitWidth = 1083
+  end
+  object lv1: TListView
+    Left = 264
+    Top = 112
+    Width = 545
+    Height = 177
+    BevelInner = bvNone
+    Columns = <
+      item
+        Caption = 'Lp'
+        Width = 30
+      end
+      item
+        Caption = 'Imie'
+        Width = 150
+      end
+      item
+        Caption = 'Nazwisko'
+        Width = 150
+      end
+      item
+        Caption = 'Nr telefonu'
+        Width = 150
+      end>
+    RowSelect = True
+    TabOrder = 2
+    ViewStyle = vsReport
+  end
+  object btn1: TButton
+    Left = 600
+    Top = 536
+    Width = 75
+    Height = 25
+    Caption = 'btn1'
+    TabOrder = 3
+    OnClick = btn1Click
   end
 end

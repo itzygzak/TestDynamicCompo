@@ -18,8 +18,44 @@ object Form2: TForm2
   OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
+  object lv1: TListView
+    Left = 58
+    Top = 64
+    Width = 545
+    Height = 177
+    BevelInner = bvNone
+    Columns = <
+      item
+        Caption = 'Lp'
+        Width = 30
+      end
+      item
+        Caption = 'Imie'
+        Width = 150
+      end
+      item
+        Caption = 'Nazwisko'
+        Width = 150
+      end
+      item
+        Caption = 'Nr telefonu'
+        Width = 150
+      end>
+    RowSelect = True
+    TabOrder = 0
+    ViewStyle = vsReport
+  end
+  object btn1: TButton
+    Left = 392
+    Top = 288
+    Width = 75
+    Height = 25
+    Caption = 'btn1'
+    TabOrder = 1
+    OnClick = btn1Click
+  end
   object pm1: TPopupMenu
     Left = 312
-    Top = 160
+    Top = 336
   end
 end

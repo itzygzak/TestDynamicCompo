@@ -1,10 +1,9 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  BorderStyle = bsNone
   Caption = 'Form1'
-  ClientHeight = 718
-  ClientWidth = 1099
+  ClientHeight = 679
+  ClientWidth = 1083
   Color = clBtnFace
   Constraints.MinHeight = 718
   Constraints.MinWidth = 1099
@@ -22,20 +21,23 @@ object Form1: TForm1
   object spltVw1: TSplitView
     AlignWithMargins = True
     Left = 3
-    Top = 28
+    Top = 3
     Width = 200
-    Height = 687
+    Height = 673
     OpenedWidth = 200
     Placement = svpLeft
     TabOrder = 0
+    ExplicitTop = 28
+    ExplicitHeight = 687
     object grp1: TGroupBox
       Left = 0
       Top = 0
       Width = 200
-      Height = 687
+      Height = 673
       Align = alClient
       ParentBackground = False
       TabOrder = 0
+      ExplicitHeight = 687
       object pnl1: TPanel
         Left = 2
         Top = 15
@@ -80,7 +82,7 @@ object Form1: TForm1
       end
       object pnl4: TPanel
         Left = 2
-        Top = 644
+        Top = 630
         Width = 196
         Height = 41
         Align = alBottom
@@ -89,6 +91,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 3
         OnClick = pnl4Click
+        ExplicitTop = 644
       end
       object pnl5: TPanel
         Left = 2
@@ -104,51 +107,18 @@ object Form1: TForm1
     end
   end
   object pnl6: TPanel
-    Left = 0
+    Left = 206
     Top = 0
-    Width = 1099
-    Height = 25
-    Align = alTop
+    Width = 877
+    Height = 679
+    Align = alClient
     BevelOuter = bvNone
     Caption = 'pnl6'
     ParentBackground = False
     TabOrder = 1
     StyleElements = []
-  end
-  object lv1: TListView
-    Left = 264
-    Top = 112
-    Width = 545
-    Height = 177
-    BevelInner = bvNone
-    Columns = <
-      item
-        Caption = 'Lp'
-        Width = 30
-      end
-      item
-        Caption = 'Imie'
-        Width = 150
-      end
-      item
-        Caption = 'Nazwisko'
-        Width = 150
-      end
-      item
-        Caption = 'Nr telefonu'
-        Width = 150
-      end>
-    RowSelect = True
-    TabOrder = 2
-    ViewStyle = vsReport
-  end
-  object btn1: TButton
-    Left = 600
-    Top = 536
-    Width = 75
-    Height = 25
-    Caption = 'btn1'
-    TabOrder = 3
-    OnClick = btn1Click
+    ExplicitLeft = 0
+    ExplicitWidth = 1099
+    ExplicitHeight = 25
   end
 end

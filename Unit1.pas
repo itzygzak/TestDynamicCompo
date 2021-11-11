@@ -17,8 +17,6 @@ type
     pnl4: TPanel;
     pnl5: TPanel;
     pnl6: TPanel;
-    lv1: TListView;
-    btn1: TButton;
     procedure FormCreate(Sender: TObject);
     procedure pnl1MouseLeave(Sender: TObject);
     procedure pnl2MouseLeave(Sender: TObject);
@@ -33,7 +31,6 @@ type
     procedure pnl4Click(Sender: TObject);
     procedure pnl5Click(Sender: TObject);
     procedure NewForm(InstanceClass :TComponentClass; var Reference);
-    procedure btn1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -56,22 +53,6 @@ begin
 //DynamicForm:=nil;
 end;
 
-
-procedure TForm1.btn1Click(Sender: TObject);
-var
-Itm:TListItem;
-i:Integer;
-begin
-for I := 1 to 10 do
-begin
-Itm:=lv1.Items.Add;
-
-Itm.Caption:='Item '+IntToStr(lv1.Items.Count);
-Itm.SubItems.Add(Itm.Caption+' Subitem 1');
-Itm.SubItems.Add(Itm.Caption+' Subitem 2');
-Itm.ImageIndex:=0;
-end;
-end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
@@ -114,17 +95,10 @@ begin
 end;
 
 procedure TForm1.pnl1Click(Sender: TObject);
-//var DynamicForm : TForm;
 begin
 Form2:=TForm2.Create(Application);
-//NewForm(TForm2,Form2);
+Form2.Parent:= pnl6;
 Form2.Show;
-{    DynamicForm:=TForm.Create(Application);//(Self);
-
-    DynamicForm.Caption :='Forma dynamiczna';
-    DynamicForm.Parent := Self;
-    DynamicForm.Name := 'Dynamic';
-    DynamicForm.FormStyle := fsMDIChild; }
 
 
 end;

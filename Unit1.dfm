@@ -27,8 +27,6 @@ object Form1: TForm1
     OpenedWidth = 200
     Placement = svpLeft
     TabOrder = 0
-    ExplicitTop = 28
-    ExplicitHeight = 687
     object grp1: TGroupBox
       Left = 0
       Top = 0
@@ -37,7 +35,6 @@ object Form1: TForm1
       Align = alClient
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 687
       object pnl1: TPanel
         Left = 2
         Top = 15
@@ -91,7 +88,6 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 3
         OnClick = pnl4Click
-        ExplicitTop = 644
       end
       object pnl5: TPanel
         Left = 2
@@ -117,8 +113,5 @@ object Form1: TForm1
     ParentBackground = False
     TabOrder = 1
     StyleElements = []
-    ExplicitLeft = 0
-    ExplicitWidth = 1099
-    ExplicitHeight = 25
   end
 end

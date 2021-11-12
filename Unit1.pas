@@ -57,7 +57,7 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
 grp1.Color:=rgb(37,38,40);
-pnl6.Color:=RGB(37,38,40);
+//pnl6.Color:=RGB(37,38,40);
 
 Pnl1.Color:=rgb(37,38,40);
 Pnl1.Font.Color:=clWhite;
@@ -96,8 +96,8 @@ end;
 
 procedure TForm1.pnl1Click(Sender: TObject);
 begin
-Form2:=TForm2.Create(Application);
-Form2.Parent:= pnl6;
+Form2:=TForm2.Create(pnl6);
+//Form2.Parent:= pnl6;
 Form2.Show;
 
 

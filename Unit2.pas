@@ -4,11 +4,17 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ComCtrls, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ComCtrls, Vcl.StdCtrls,
+  Vcl.ExtCtrls;
 
 type
   TForm2 = class(TForm)
     pm1: TPopupMenu;
+    pnl1: TPanel;
+    pgc1: TPageControl;
+    ts1: TTabSheet;
+    ts2: TTabSheet;
+    ts3: TTabSheet;
     lv1: TListView;
     btn1: TButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

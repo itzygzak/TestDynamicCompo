@@ -31,6 +31,7 @@ type
     procedure pnl4Click(Sender: TObject);
     procedure pnl5Click(Sender: TObject);
     procedure NewForm(InstanceClass :TComponentClass; var Reference);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
 
   private
     { Private declarations }
@@ -53,6 +54,13 @@ begin
 //DynamicForm:=nil;
 end;
 
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+var a : Integer;
+begin
+for a:= MDIChildCount -1 downto 0 do
+MDIChildren[a].Close;
+end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
@@ -94,14 +102,6 @@ begin
   Application.CreateForm(InstanceClass,Reference);
 end;
 
-procedure TForm1.pnl1Click(Sender: TObject);
-begin
-Form2:=TForm2.Create(pnl6);
-//Form2.Parent:= pnl6;
-Form2.Show;
-
-
-end;
 
 procedure TForm1.pnl1MouseLeave(Sender: TObject);
 begin
@@ -112,6 +112,13 @@ procedure TForm1.pnl1MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
 Pnl1.Color:=rgb(182,186,181);
+end;
+
+procedure TForm1.pnl1Click(Sender: TObject);
+begin
+Form2:=TForm2.Create(Form1);
+Form2.Parent:= Self;//pnl6;
+Form2.Show;
 end;
 
 procedure TForm1.pnl2Click(Sender: TObject);
@@ -135,9 +142,10 @@ end;
 
 procedure TForm1.pnl3Click(Sender: TObject);
 begin
-Form5:=TForm5.Create(Application);
+Form5:=TForm5.Create(Form1);
+Form5.Parent:=pnl6;
 Form5.show;
-{   with TForm2.Create(Application) do
+{   with TForm2.Create() do
   begin
     ManualDock(Form2);
   end;                }

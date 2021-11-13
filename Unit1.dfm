@@ -15,6 +15,7 @@ object Form1: TForm1
   FormStyle = fsMDIForm
   OldCreateOrder = False
   Visible = True
+  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -48,6 +49,7 @@ object Form1: TForm1
         OnClick = pnl1Click
         OnMouseLeave = pnl1MouseLeave
         OnMouseMove = pnl1MouseMove
+        ExplicitTop = 9
       end
       object pnl2: TPanel
         Left = 2
@@ -104,13 +106,28 @@ object Form1: TForm1
   end
   object pnl6: TPanel
     Left = 206
-    Top = 0
+    Top = 147
     Width = 877
-    Height = 679
-    Align = alClient
+    Height = 532
+    ParentCustomHint = False
     BevelOuter = bvNone
+    BiDiMode = bdLeftToRight
     Caption = 'pnl6'
+    Ctl3D = True
+    DoubleBuffered = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentBiDiMode = False
     ParentBackground = False
+    ParentCtl3D = False
+    ParentDoubleBuffered = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowCaption = False
+    ShowHint = False
     TabOrder = 1
     StyleElements = []
   end

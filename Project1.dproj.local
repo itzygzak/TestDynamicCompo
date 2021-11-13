@@ -2,9 +2,9 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>1899.12.30 00:00:00.000.358,=C:\Dev\Delphi\TestDynamicCompo\Unit3.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.196,C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Dev\Delphi\TestDynamicCompo\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.481,=C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.177,=C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.196,C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Dev\Delphi\TestDynamicCompo\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.714,=C:\Dev\Delphi\TestDynamicCompo\Unit6.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.853,=C:\Dev\Delphi\TestDynamicCompo\Unit5.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.025,=C:\Dev\Delphi\TestDynamicCompo\Unit4.pas</Transaction>

@@ -1,6 +1,7 @@
 object Form2: TForm2
   Left = 0
   Top = 0
+  Align = alLeft
   Caption = 'Form2'
   ClientHeight = 431
   ClientWidth = 683
@@ -26,10 +27,6 @@ object Form2: TForm2
     Align = alClient
     Caption = 'pnl1'
     TabOrder = 0
-    ExplicitLeft = 392
-    ExplicitTop = 16
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object pgc1: TPageControl
       Left = 1
       Top = 1
@@ -38,20 +35,16 @@ object Form2: TForm2
       ActivePage = ts2
       Align = alClient
       TabOrder = 0
-      ExplicitLeft = 32
-      ExplicitTop = 24
-      ExplicitWidth = 289
-      ExplicitHeight = 193
       object ts1: TTabSheet
         Caption = 'ts1'
+        ExplicitLeft = 0
+        ExplicitTop = 0
         ExplicitWidth = 281
         ExplicitHeight = 165
       end
       object ts2: TTabSheet
         Caption = 'ts2'
         ImageIndex = 1
-        ExplicitWidth = 281
-        ExplicitHeight = 165
         object lv1: TListView
           Left = 58
           Top = 64
@@ -92,6 +85,8 @@ object Form2: TForm2
       object ts3: TTabSheet
         Caption = 'ts3'
         ImageIndex = 2
+        ExplicitLeft = 0
+        ExplicitTop = 0
         ExplicitWidth = 281
         ExplicitHeight = 165
       end

@@ -1,6 +1,7 @@
 object Form3: TForm3
   Left = 0
   Top = 0
+  Align = alLeft
   Caption = 'Form3'
   ClientHeight = 383
   ClientWidth = 671

@@ -16,7 +16,6 @@ type
     pnl3: TPanel;
     pnl4: TPanel;
     pnl5: TPanel;
-    pnl6: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure pnl1MouseLeave(Sender: TObject);
     procedure pnl2MouseLeave(Sender: TObject);
@@ -32,6 +31,10 @@ type
     procedure pnl5Click(Sender: TObject);
     procedure NewForm(InstanceClass :TComponentClass; var Reference);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure pnl5MouseLeave(Sender: TObject);
+    procedure pnl5MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+    procedure pnl4MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+    procedure pnl4MouseLeave(Sender: TObject);
 
   private
     { Private declarations }
@@ -65,7 +68,6 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
 grp1.Color:=rgb(37,38,40);
-//pnl6.Color:=RGB(37,38,40);
 
 Pnl1.Color:=rgb(37,38,40);
 Pnl1.Font.Color:=clWhite;
@@ -90,16 +92,17 @@ end;
 
 
 procedure TForm1.NewForm(InstanceClass: TComponentClass; var Reference);
-var i : Integer;
+//var i : Integer;
 begin
-  for i:= 0 to MDIChildCount -1 do
+//przetestowaæ
+  {for i:= 0 to MDIChildCount -1 do
     if MDIChildren[i] is InstanceClass  then
       begin
         MDIChildren[i].Show;
         MDIChildren[i].WindowState := wsMaximized;
         Exit;
       end;
-  Application.CreateForm(InstanceClass,Reference);
+  Application.CreateForm(InstanceClass,Reference);}
 end;
 
 
@@ -117,16 +120,8 @@ end;
 procedure TForm1.pnl1Click(Sender: TObject);
 begin
 Form2:=TForm2.Create(Form1);
-Form2.Parent:= Self;//pnl6;
+//Form2.Parent:= Self;
 Form2.Show;
-end;
-
-procedure TForm1.pnl2Click(Sender: TObject);
-begin
-//Form3 := TForm3.Create(Application);
-Form3 := TForm3.Create(Form1);
-Form3.Show;
-//ManualDock(Form3);
 end;
 
 procedure TForm1.pnl2MouseLeave(Sender: TObject);
@@ -140,15 +135,13 @@ begin
 Pnl2.Color:=rgb(182,186,181);
 end;
 
-procedure TForm1.pnl3Click(Sender: TObject);
+
+procedure TForm1.pnl2Click(Sender: TObject);
 begin
-Form5:=TForm5.Create(Form1);
-Form5.Parent:=pnl6;
-Form5.show;
-{   with TForm2.Create() do
-  begin
-    ManualDock(Form2);
-  end;                }
+//Form3 := TForm3.Create(Application);
+Form3 := TForm3.Create(Form1);
+Form3.Show;
+//ManualDock(Form3);
 end;
 
 procedure TForm1.pnl3MouseLeave(Sender: TObject);
@@ -162,130 +155,56 @@ begin
 Pnl3.Color:=rgb(182,186,181);
 end;
 
+
+procedure TForm1.pnl3Click(Sender: TObject);
+begin
+Form5:=TForm5.Create(Form1);
+Form5.show;
+{   with TForm2.Create() do
+  begin
+    ManualDock(Form2);
+  end;                }
+end;
+
+
 procedure TForm1.pnl4Click(Sender: TObject);
 begin
 Application.Terminate;
 end;
 
+procedure TForm1.pnl4MouseLeave(Sender: TObject);
+begin
+Pnl4.Color:=rgb(37,38,40);
+end;
+
+procedure TForm1.pnl4MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+Pnl4.Color:=rgb(182,186,181);
+end;
+
 procedure TForm1.pnl5Click(Sender: TObject);
 begin
-with TForm6.Create(Application) do
+Form6:=TForm6.Create(Form1);
+Form6.Show;
+
+{with TForm6.Create(Application) do
 begin
  ManualDock(Form6);
-end;
+end;}
 
 end;
 
-//Przyk³ad dokowania dla dokumentu oraz oddokowania. Przyk³ad z netu
-{
-unit floating;
 
-interface
-
-uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
-
-type
-  TFloatingForm = class(TForm)
-    procedure FormCreate(Sender: TObject);
-    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
-  private
-    fNoFloatParent : TWinControl;
-    fSetFloatControl : TControl;
-
-    fOnBeforeDock: TNotifyEvent;
-    fOnAfterDock: TNotifyEvent;
-    fOnBeforeFloat: TNotifyEvent;
-    fOnAfterFloat: TNotifyEvent;
-  public
-    procedure CreateParams (var Params: TCreateParams); override;
-    constructor Create(AOwner : TComponent; const noFloatParent : TWinControl; const setFloatControl : TControl); reintroduce;
-
-    procedure Float;
-
-    property OnBeforeDock : TNotifyEvent read fOnBeforeDock write fOnBeforeDock;
-    property OnAfterDock : TNotifyEvent read fOnAfterDock write fOnAfterDock;
-    property OnBeforeFloat : TNotifyEvent read fOnBeforeFloat write fOnBeforeFloat;
-    property OnAfterFloat : TNotifyEvent read fOnAfterFloat write fOnAfterFloat;
-  end;
-
-var
-  FloatingForm: TFloatingForm;
-
-implementation
-//tu dodaæ zasoby
-
-constructor TFloatingForm.Create(AOwner: TComponent;
-  const noFloatParent: TWinControl; const setFloatControl: TControl);
+procedure TForm1.pnl5MouseLeave(Sender: TObject);
 begin
-  fNoFloatParent := noFloatParent;
-  fSetFloatControl := setFloatControl;
-
-  inherited Create(AOwner);
+Pnl5.Color:=rgb(37,38,40);
 end;
 
-procedure TFloatingForm.CreateParams(var Params: TCreateParams);
+procedure TForm1.pnl5MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
 begin
-  inherited CreateParams(Params);
-  //desktop button
-  Params.ExStyle := Params.ExStyle or WS_EX_APPWINDOW;
+Pnl5.Color:=rgb(182,186,181);
 end;
-
-procedure TFloatingForm.Float;
-var
-  cnt : integer;
-begin
-  if Visible then Exit; //already floating
-
-  fSetFloatControl.Visible := false;
-
-  if Assigned(fOnBeforeFloat) then fOnBeforeFloat(self);
-
-  //"magic"
-  for cnt := -1 + fNoFloatParent.ControlCount downto 0 do
-  begin
-    fNoFloatParent.Controls[cnt].Parent := self;
-  end;
-
-  Visible := true;
-
-  if Assigned(fOnAfterFloat) then fOnAfterFloat(self);
-end;
-
-procedure TFloatingForm.FormClose(Sender: TObject;
-  var Action: TCloseAction);
-begin
-// HIDE by default!
-// Action := caNone;
-end;
-
-procedure TFloatingForm.FormCloseQuery(Sender: TObject;
-  var CanClose: Boolean);
-var
-  cnt : integer;
-begin
-  if Assigned(fOnBeforeDock) then fOnBeforeDock(self);
-
-  for cnt:= -1 + ControlCount downto 0 do
-  begin
-    Controls[cnt].Parent := fNoFloatParent;
-  end;
-
-  fSetFloatControl.Visible := true;
-
-  if Assigned(fOnAfterDock) then fOnAfterDock(self);
-  //form is hidden by default (Action = caHide on OnClose)
-end;
-
-procedure TFloatingForm.FormCreate(Sender: TObject);
-begin
-  FormStyle := fsStayOnTop;
-end;
-
-end.
-
-}
 
 end.

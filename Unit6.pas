@@ -8,10 +8,10 @@ uses
 
 type
   TForm6 = class(TForm)
-    lbl1: TLabel;
     pm1: TPopupMenu;
     Zamknij1: TMenuItem;
     procedure Zamknij1Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -24,6 +24,12 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm6.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action:=caFree;
+Form6:=nil;
+end;
 
 procedure TForm6.Zamknij1Click(Sender: TObject);
 begin

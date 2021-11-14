@@ -1,6 +1,7 @@
 object Form5: TForm5
   Left = 0
   Top = 0
+  Align = alLeft
   Caption = 'Form5'
   ClientHeight = 299
   ClientWidth = 852

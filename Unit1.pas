@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.WinXCtrls, Vcl.ComCtrls;
+  Vcl.WinXCtrls, Vcl.ComCtrls, Vcl.Imaging.pngimage;
 
 type
   TForm1 = class(TForm)
@@ -16,6 +16,8 @@ type
     pnl3: TPanel;
     pnl4: TPanel;
     pnl5: TPanel;
+    pnl6: TPanel;
+    img1: TImage;
     procedure FormCreate(Sender: TObject);
     procedure pnl1MouseLeave(Sender: TObject);
     procedure pnl2MouseLeave(Sender: TObject);
@@ -35,6 +37,7 @@ type
     procedure pnl5MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure pnl4MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure pnl4MouseLeave(Sender: TObject);
+    procedure img1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -68,6 +71,7 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
 grp1.Color:=rgb(37,38,40);
+pnl6.Color:=RGB(37,38,40);
 
 Pnl1.Color:=rgb(37,38,40);
 Pnl1.Font.Color:=clWhite;
@@ -90,6 +94,14 @@ Pnl5.Font.Color:=clWhite;
 Pnl5.Font.Size:=12;
 end;
 
+
+procedure TForm1.img1Click(Sender: TObject);
+begin
+if spltVw1.Opened = True then
+    spltVw1.Close
+  else
+    spltVw1.Open;
+end;
 
 procedure TForm1.NewForm(InstanceClass: TComponentClass; var Reference);
 //var i : Integer;

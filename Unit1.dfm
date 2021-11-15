@@ -1,9 +1,10 @@
 object Form1: TForm1
   Left = 0
   Top = 0
+  Width = 1099
+  Height = 718
+  AutoScroll = True
   Caption = 'Form1'
-  ClientHeight = 679
-  ClientWidth = 1083
   Color = clBtnFace
   Constraints.MinHeight = 718
   Constraints.MinWidth = 1099
@@ -34,6 +35,7 @@ object Form1: TForm1
       Width = 200
       Height = 673
       Align = alClient
+      Anchors = [akLeft, akTop, akBottom]
       ParentBackground = False
       TabOrder = 0
       object pnl1: TPanel
@@ -49,7 +51,6 @@ object Form1: TForm1
         OnClick = pnl1Click
         OnMouseLeave = pnl1MouseLeave
         OnMouseMove = pnl1MouseMove
-        ExplicitTop = 9
       end
       object pnl2: TPanel
         Left = 2
@@ -90,6 +91,8 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 3
         OnClick = pnl4Click
+        OnMouseLeave = pnl4MouseLeave
+        OnMouseMove = pnl4MouseMove
       end
       object pnl5: TPanel
         Left = 2
@@ -101,34 +104,9 @@ object Form1: TForm1
         Caption = 'Forma Dock'
         TabOrder = 4
         OnClick = pnl5Click
+        OnMouseLeave = pnl5MouseLeave
+        OnMouseMove = pnl5MouseMove
       end
     end
-  end
-  object pnl6: TPanel
-    Left = 206
-    Top = 147
-    Width = 877
-    Height = 532
-    ParentCustomHint = False
-    BevelOuter = bvNone
-    BiDiMode = bdLeftToRight
-    Caption = 'pnl6'
-    Ctl3D = True
-    DoubleBuffered = False
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentBiDiMode = False
-    ParentBackground = False
-    ParentCtl3D = False
-    ParentDoubleBuffered = False
-    ParentFont = False
-    ParentShowHint = False
-    ShowCaption = False
-    ShowHint = False
-    TabOrder = 1
-    StyleElements = []
   end
 end

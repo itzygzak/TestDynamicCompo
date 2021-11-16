@@ -9,6 +9,7 @@ uses
 
 type
   TForm1 = class(TForm)
+    pnl7: TPanel;
     spltVw1: TSplitView;
     grp1: TGroupBox;
     pnl1: TPanel;
@@ -16,6 +17,7 @@ type
     pnl3: TPanel;
     pnl4: TPanel;
     pnl5: TPanel;
+    pnl6: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure pnl1MouseLeave(Sender: TObject);
     procedure pnl2MouseLeave(Sender: TObject);
@@ -68,7 +70,7 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
 grp1.Color:=rgb(37,38,40);
-
+pnl6.Color:=rgb(37,38,40);
 Pnl1.Color:=rgb(37,38,40);
 Pnl1.Font.Color:=clWhite;
 Pnl1.Font.Size:=12;

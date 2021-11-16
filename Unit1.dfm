@@ -15,11 +15,34 @@ object Form1: TForm1
   Font.Style = []
   FormStyle = fsMDIForm
   OldCreateOrder = False
+  Position = poMainFormCenter
   Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
+  object pnl7: TPanel
+    Left = 207
+    Top = 0
+    Width = 876
+    Height = 679
+    Align = alRight
+    BevelOuter = bvNone
+    ParentBackground = False
+    TabOrder = 0
+    object pnl6: TPanel
+      Left = 0
+      Top = 0
+      Width = 876
+      Height = 41
+      Align = alTop
+      BevelOuter = bvNone
+      ParentBackground = False
+      TabOrder = 0
+      ExplicitLeft = 835
+      ExplicitWidth = 679
+    end
+  end
   object spltVw1: TSplitView
     AlignWithMargins = True
     Left = 3
@@ -28,7 +51,10 @@ object Form1: TForm1
     Height = 673
     OpenedWidth = 200
     Placement = svpLeft
-    TabOrder = 0
+    TabOrder = 1
+    ExplicitLeft = 451
+    ExplicitTop = -2
+    ExplicitHeight = 671
     object grp1: TGroupBox
       Left = 0
       Top = 0
@@ -102,6 +128,7 @@ object Form1: TForm1
         Align = alTop
         BevelOuter = bvNone
         Caption = 'Forma Dock'
+        ParentBackground = False
         TabOrder = 4
         OnClick = pnl5Click
         OnMouseLeave = pnl5MouseLeave

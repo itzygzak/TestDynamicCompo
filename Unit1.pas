@@ -5,11 +5,10 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.WinXCtrls, Vcl.ComCtrls;
+  Vcl.WinXCtrls, Vcl.ComCtrls, Vcl.Imaging.pngimage;
 
 type
   TForm1 = class(TForm)
-    pnl7: TPanel;
     spltVw1: TSplitView;
     grp1: TGroupBox;
     pnl1: TPanel;
@@ -18,6 +17,7 @@ type
     pnl4: TPanel;
     pnl5: TPanel;
     pnl6: TPanel;
+    img1: TImage;
     procedure FormCreate(Sender: TObject);
     procedure pnl1MouseLeave(Sender: TObject);
     procedure pnl2MouseLeave(Sender: TObject);
@@ -31,12 +31,14 @@ type
     procedure pnl3Click(Sender: TObject);
     procedure pnl4Click(Sender: TObject);
     procedure pnl5Click(Sender: TObject);
-    procedure NewForm(InstanceClass :TComponentClass; var Reference);
+   // procedure NewForm(InstanceClass :TComponentClass; var Reference);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure pnl5MouseLeave(Sender: TObject);
     procedure pnl5MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure pnl4MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure pnl4MouseLeave(Sender: TObject);
+    procedure img1Click(Sender: TObject);
+
 
   private
     { Private declarations }
@@ -93,20 +95,14 @@ Pnl5.Font.Size:=12;
 end;
 
 
-procedure TForm1.NewForm(InstanceClass: TComponentClass; var Reference);
-//var i : Integer;
-begin
-//przetestowaæ
-  {for i:= 0 to MDIChildCount -1 do
-    if MDIChildren[i] is InstanceClass  then
-      begin
-        MDIChildren[i].Show;
-        MDIChildren[i].WindowState := wsMaximized;
-        Exit;
-      end;
-  Application.CreateForm(InstanceClass,Reference);}
-end;
 
+procedure TForm1.img1Click(Sender: TObject);
+begin
+ if spltVw1.Opened = True then
+    spltVw1.Close
+  else
+    spltVw1.Open;
+end;
 
 procedure TForm1.pnl1MouseLeave(Sender: TObject);
 begin
@@ -208,5 +204,7 @@ procedure TForm1.pnl5MouseMove(Sender: TObject; Shift: TShiftState; X,
 begin
 Pnl5.Color:=rgb(182,186,181);
 end;
+
+
 
 end.

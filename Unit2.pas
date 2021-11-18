@@ -17,8 +17,11 @@ type
     ts3: TTabSheet;
     lv1: TListView;
     btn1: TButton;
+    lbl1: TLabel;
+    pnl2: TPanel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btn1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,6 +56,12 @@ procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
 Action:=caFree;
 Form2:=nil;
+end;
+
+procedure TForm2.FormCreate(Sender: TObject);
+begin
+lbl1.Caption:='Ala ma kota';
+pnl2.Color:=rgb(37,38,40);
 end;
 
 end.

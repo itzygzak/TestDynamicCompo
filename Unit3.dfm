@@ -1,7 +1,11 @@
 object Form3: TForm3
   Left = 0
   Top = 0
+  ParentCustomHint = False
   Align = alLeft
+  BiDiMode = bdLeftToRight
+  BorderIcons = []
+  BorderStyle = bsNone
   Caption = 'Form3'
   ClientHeight = 383
   ClientWidth = 671
@@ -13,10 +17,21 @@ object Form3: TForm3
   Font.Style = []
   FormStyle = fsMDIChild
   OldCreateOrder = False
+  ParentBiDiMode = False
   Visible = True
   OnClose = FormClose
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
+  object pnl1: TPanel
+    Left = 0
+    Top = 0
+    Width = 671
+    Height = 25
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 0
+  end
   object pm1: TPopupMenu
     Left = 632
     Top = 336

@@ -1,10 +1,9 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  Width = 1099
-  Height = 718
-  AutoScroll = True
   Caption = 'Form1'
+  ClientHeight = 679
+  ClientWidth = 1083
   Color = clBtnFace
   Constraints.MinHeight = 718
   Constraints.MinWidth = 1099

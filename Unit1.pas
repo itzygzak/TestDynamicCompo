@@ -71,6 +71,7 @@ end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
+
 grp1.Color:=rgb(37,38,40);
 pnl6.Color:=rgb(37,38,40);
 Pnl1.Color:=rgb(37,38,40);

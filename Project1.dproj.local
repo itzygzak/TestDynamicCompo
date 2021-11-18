@@ -1,15 +1,2 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject>
-	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.481,=C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.177,=C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.196,C:\Dev\Delphi\TestDynamicCompo\Unit1.pas=C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.083,C:\Dev\Delphi\TestDynamicCompo\Project1.dproj=C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.714,=C:\Dev\Delphi\TestDynamicCompo\Unit6.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.853,=C:\Dev\Delphi\TestDynamicCompo\Unit5.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.025,=C:\Dev\Delphi\TestDynamicCompo\Unit4.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.196,C:\Dev\Delphi\TestDynamicCompo\Unit1.dfm=C:\Users\Przemo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.246,=C:\Dev\Delphi\TestDynamicCompo\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.358,=C:\Dev\Delphi\TestDynamicCompo\Unit3.pas</Transaction>
-  </Transactions>
-</BorlandProject>
+<BorlandProject/>

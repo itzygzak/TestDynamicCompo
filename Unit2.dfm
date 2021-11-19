@@ -2,6 +2,7 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Align = alLeft
+  BorderIcons = []
   BorderStyle = bsNone
   Caption = 'Form2'
   ClientHeight = 431
@@ -37,11 +38,17 @@ object Form2: TForm2
       TabOrder = 0
       object ts1: TTabSheet
         Caption = 'ts1'
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
         ExplicitHeight = 401
       end
       object ts2: TTabSheet
         Caption = 'ts2'
         ImageIndex = 1
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
         ExplicitHeight = 401
         object lbl1: TLabel
           Left = 56
@@ -90,6 +97,9 @@ object Form2: TForm2
       object ts3: TTabSheet
         Caption = 'ts3'
         ImageIndex = 2
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
         ExplicitHeight = 401
       end
     end

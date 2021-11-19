@@ -17,6 +17,7 @@ object Form1: TForm1
   Position = poMainFormCenter
   Visible = True
   OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -107,6 +108,16 @@ object Form1: TForm1
         OnClick = pnl5Click
         OnMouseLeave = pnl5MouseLeave
         OnMouseMove = pnl5MouseMove
+      end
+      object pnl7: TPanel
+        Left = 3
+        Top = 200
+        Width = 185
+        Height = 41
+        Caption = 'Zaloguj'
+        ParentBackground = False
+        TabOrder = 5
+        OnClick = pnl7Click
       end
     end
   end

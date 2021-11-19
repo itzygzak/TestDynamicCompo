@@ -3,7 +3,8 @@ unit Unit3;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ExtCtrls;
 
 type
@@ -27,13 +28,13 @@ implementation
 
 procedure TForm3.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-Action:=caFree;
-Form3:=nil;
+  Action := caFree;
+  Form3 := nil;
 end;
 
 procedure TForm3.FormCreate(Sender: TObject);
 begin
-pnl1.Color:=rgb(37,38,40);
+  pnl1.Color := rgb(37, 38, 40);
 end;
 
 end.

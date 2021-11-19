@@ -3,7 +3,8 @@ unit Unit5;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
 
 type
@@ -25,8 +26,8 @@ implementation
 
 procedure TForm5.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-Action:=caFree;
-Form5:=nil;
+  Action := caFree;
+  Form5 := nil;
 end;
 
 end.

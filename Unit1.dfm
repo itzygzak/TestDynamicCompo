@@ -1,10 +1,9 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  Width = 1099
-  Height = 718
-  AutoScroll = True
   Caption = 'Form1'
+  ClientHeight = 679
+  ClientWidth = 1083
   Color = clBtnFace
   Constraints.MinHeight = 718
   Constraints.MinWidth = 1099
@@ -18,6 +17,7 @@ object Form1: TForm1
   Position = poMainFormCenter
   Visible = True
   OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -41,7 +41,7 @@ object Form1: TForm1
       TabOrder = 0
       object pnl1: TPanel
         Left = 2
-        Top = 15
+        Top = 56
         Width = 196
         Height = 41
         Align = alTop
@@ -52,10 +52,11 @@ object Form1: TForm1
         OnClick = pnl1Click
         OnMouseLeave = pnl1MouseLeave
         OnMouseMove = pnl1MouseMove
+        ExplicitTop = 104
       end
       object pnl2: TPanel
         Left = 2
-        Top = 56
+        Top = 97
         Width = 196
         Height = 41
         Align = alTop
@@ -66,10 +67,11 @@ object Form1: TForm1
         OnClick = pnl2Click
         OnMouseLeave = pnl2MouseLeave
         OnMouseMove = pnl2MouseMove
+        ExplicitTop = 145
       end
       object pnl3: TPanel
         Left = 2
-        Top = 97
+        Top = 138
         Width = 196
         Height = 41
         Align = alTop
@@ -80,6 +82,7 @@ object Form1: TForm1
         OnClick = pnl3Click
         OnMouseLeave = pnl3MouseLeave
         OnMouseMove = pnl3MouseMove
+        ExplicitTop = 186
       end
       object pnl4: TPanel
         Left = 2
@@ -97,7 +100,7 @@ object Form1: TForm1
       end
       object pnl5: TPanel
         Left = 2
-        Top = 138
+        Top = 179
         Width = 196
         Height = 41
         Align = alTop
@@ -108,6 +111,23 @@ object Form1: TForm1
         OnClick = pnl5Click
         OnMouseLeave = pnl5MouseLeave
         OnMouseMove = pnl5MouseMove
+        ExplicitLeft = 1
+        ExplicitTop = 215
+      end
+      object pnl7: TPanel
+        Left = 2
+        Top = 15
+        Width = 196
+        Height = 41
+        Align = alTop
+        BevelOuter = bvNone
+        Caption = 'Zaloguj'
+        ParentBackground = False
+        TabOrder = 5
+        OnClick = pnl7Click
+        ExplicitLeft = 3
+        ExplicitTop = 289
+        ExplicitWidth = 194
       end
     end
   end
@@ -142,41 +162,6 @@ object Form1: TForm1
       ExplicitLeft = 56
       ExplicitTop = 8
       ExplicitHeight = 48
-    end
-    object rzEdt1: TRzEdit
-      Left = 640
-      Top = 17
-      Width = 137
-      Height = 27
-      ParentCustomHint = False
-      Text = ''
-      BiDiMode = bdLeftToRight
-      Color = clWhite
-      Ctl3D = True
-      DoubleBuffered = False
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      FrameColor = clWhite
-      FrameSides = []
-      FrameStyle = fsNone
-      FramingPreference = fpCustomFraming
-      ParentBiDiMode = False
-      ParentCtl3D = False
-      ParentDoubleBuffered = False
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-      TabOrder = 0
-    end
-    object edt1: TEdit
-      Left = 360
-      Top = 16
-      Width = 121
-      Height = 21
-      TabOrder = 1
     end
   end
 end

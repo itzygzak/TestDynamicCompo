@@ -3,7 +3,6 @@ __recovery
 Win32
 ikony
 Wersje
-ModelSupport_DziennikZaj
 *.dproj
 *.exe
 *.dll
@@ -15,3 +14,7 @@ ModelSupport_DziennikZaj
 *.txt
 *.vlb
 *.ttf
+*.*local
+*.ident*
+*.res
+*.ota*

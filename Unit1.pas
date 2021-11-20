@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.WinXCtrls, Vcl.ComCtrls, Vcl.Imaging.pngimage;
+  Vcl.WinXCtrls, Vcl.ComCtrls, Vcl.Imaging.pngimage, Vcl.Mask, RzEdit;
 
 type
   TForm1 = class(TForm)
@@ -18,6 +18,8 @@ type
     pnl5: TPanel;
     pnl6: TPanel;
     img1: TImage;
+    rzEdt1: TRzEdit;
+    edt1: TEdit;
     procedure FormCreate(Sender: TObject);
     procedure pnl1MouseLeave(Sender: TObject);
     procedure pnl2MouseLeave(Sender: TObject);

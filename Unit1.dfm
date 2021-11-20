@@ -143,5 +143,40 @@ object Form1: TForm1
       ExplicitTop = 8
       ExplicitHeight = 48
     end
+    object rzEdt1: TRzEdit
+      Left = 640
+      Top = 17
+      Width = 137
+      Height = 27
+      ParentCustomHint = False
+      Text = ''
+      BiDiMode = bdLeftToRight
+      Color = clWhite
+      Ctl3D = True
+      DoubleBuffered = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      FrameColor = clWhite
+      FrameSides = []
+      FrameStyle = fsNone
+      FramingPreference = fpCustomFraming
+      ParentBiDiMode = False
+      ParentCtl3D = False
+      ParentDoubleBuffered = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 0
+    end
+    object edt1: TEdit
+      Left = 360
+      Top = 16
+      Width = 121
+      Height = 21
+      TabOrder = 1
+    end
   end
 end

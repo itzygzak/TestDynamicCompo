@@ -29,49 +29,52 @@ object Form1: TForm1
     OpenedWidth = 200
     Placement = svpLeft
     TabOrder = 0
-    object grp1: TGroupBox
+    object pnl8: TPanel
       Left = 0
       Top = 0
       Width = 200
       Height = 620
       Align = alClient
-      Anchors = [akLeft, akTop, akBottom]
+      BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      object pnl1: TPanel
-        Left = 2
-        Top = 56
-        Width = 196
+      ExplicitTop = 3
+      object pnl4: TPanel
+        Left = 0
+        Top = 579
+        Width = 200
         Height = 41
-        Align = alTop
+        Align = alBottom
         BevelOuter = bvNone
-        Caption = 'Zaj'#281'cia'
+        Caption = 'Koniec pracy'
         ParentBackground = False
         TabOrder = 0
-        OnClick = pnl1Click
-        OnMouseLeave = pnl1MouseLeave
-        OnMouseMove = pnl1MouseMove
-        ExplicitTop = 104
+        OnClick = pnl4Click
+        OnMouseLeave = pnl4MouseLeave
+        OnMouseMove = pnl4MouseMove
+        ExplicitLeft = 2
+        ExplicitTop = 577
+        ExplicitWidth = 196
       end
-      object pnl2: TPanel
-        Left = 2
-        Top = 97
-        Width = 196
+      object pnl5: TPanel
+        Left = 0
+        Top = 0
+        Width = 200
         Height = 41
         Align = alTop
         BevelOuter = bvNone
-        Caption = 'Instruktorzy'
+        Caption = 'Forma Dock'
         ParentBackground = False
         TabOrder = 1
-        OnClick = pnl2Click
-        OnMouseLeave = pnl2MouseLeave
-        OnMouseMove = pnl2MouseMove
-        ExplicitTop = 145
+        OnClick = pnl5Click
+        OnMouseLeave = pnl5MouseLeave
+        OnMouseMove = pnl5MouseMove
+        ExplicitTop = 8
       end
       object pnl3: TPanel
-        Left = 2
-        Top = 138
-        Width = 196
+        Left = 0
+        Top = 82
+        Width = 200
         Height = 41
         Align = alTop
         BevelOuter = bvNone
@@ -81,42 +84,48 @@ object Form1: TForm1
         OnClick = pnl3Click
         OnMouseLeave = pnl3MouseLeave
         OnMouseMove = pnl3MouseMove
-        ExplicitTop = 186
+        ExplicitLeft = 2
+        ExplicitTop = 138
+        ExplicitWidth = 196
       end
-      object pnl4: TPanel
-        Left = 2
-        Top = 577
-        Width = 196
-        Height = 41
-        Align = alBottom
-        BevelOuter = bvNone
-        Caption = 'Koniec pracy'
-        ParentBackground = False
-        TabOrder = 3
-        OnClick = pnl4Click
-        OnMouseLeave = pnl4MouseLeave
-        OnMouseMove = pnl4MouseMove
-      end
-      object pnl5: TPanel
-        Left = 2
-        Top = 179
-        Width = 196
+      object pnl2: TPanel
+        Left = 0
+        Top = 164
+        Width = 200
         Height = 41
         Align = alTop
         BevelOuter = bvNone
-        Caption = 'Forma Dock'
+        Caption = 'Instruktorzy'
+        ParentBackground = False
+        TabOrder = 3
+        OnClick = pnl2Click
+        OnMouseLeave = pnl2MouseLeave
+        OnMouseMove = pnl2MouseMove
+        ExplicitLeft = 2
+        ExplicitTop = 97
+        ExplicitWidth = 196
+      end
+      object pnl1: TPanel
+        Left = 0
+        Top = 123
+        Width = 200
+        Height = 41
+        Align = alTop
+        BevelOuter = bvNone
+        Caption = 'Zaj'#281'cia'
         ParentBackground = False
         TabOrder = 4
-        OnClick = pnl5Click
-        OnMouseLeave = pnl5MouseLeave
-        OnMouseMove = pnl5MouseMove
-        ExplicitLeft = 1
-        ExplicitTop = 215
+        OnClick = pnl1Click
+        OnMouseLeave = pnl1MouseLeave
+        OnMouseMove = pnl1MouseMove
+        ExplicitLeft = 2
+        ExplicitTop = 56
+        ExplicitWidth = 196
       end
       object pnl7: TPanel
-        Left = 2
-        Top = 15
-        Width = 196
+        Left = 0
+        Top = 41
+        Width = 200
         Height = 41
         Align = alTop
         BevelOuter = bvNone
@@ -124,9 +133,9 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 5
         OnClick = pnl7Click
-        ExplicitLeft = 3
-        ExplicitTop = 289
-        ExplicitWidth = 194
+        ExplicitLeft = 2
+        ExplicitTop = 15
+        ExplicitWidth = 196
       end
     end
   end

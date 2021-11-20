@@ -11,14 +11,14 @@ uses
 type
   TForm1 = class(TForm)
     spltVw1: TSplitView;
-    grp1: TGroupBox;
-    pnl1: TPanel;
-    pnl2: TPanel;
-    pnl3: TPanel;
-    pnl4: TPanel;
-    pnl5: TPanel;
     pnl6: TPanel;
     img1: TImage;
+    pnl8: TPanel;
+    pnl4: TPanel;
+    pnl5: TPanel;
+    pnl3: TPanel;
+    pnl2: TPanel;
+    pnl1: TPanel;
     pnl7: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure pnl1MouseLeave(Sender: TObject);
@@ -75,7 +75,8 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
 
-  grp1.Color := rgb(37, 38, 40);
+ // grp1.Color := rgb(37, 38, 40);
+ pnl8.Color:= rgb(37, 38, 40);
 
   pnl1.Color := rgb(37, 38, 40);
   pnl1.Font.Color := clWhite;

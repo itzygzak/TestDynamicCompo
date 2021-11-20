@@ -12,6 +12,7 @@ type
     lbl1: TLabel;
     btn1: TButton;
     procedure btn1Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -30,6 +31,15 @@ procedure TForm7.btn1Click(Sender: TObject);
 begin
  { Form1.Show;
   Form7.Hide;}
+  Form7.Close;
+end;
+
+
+
+procedure TForm7.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+ Action := caFree;
+ Form7:= nil;
 end;
 
 end.

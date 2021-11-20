@@ -10,7 +10,10 @@ object Form7: TForm7
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  FormStyle = fsMDIChild
   OldCreateOrder = False
+  Visible = True
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -27,10 +30,10 @@ object Form7: TForm7
     ParentFont = False
   end
   object btn1: TButton
-    Left = 128
-    Top = 272
-    Width = 75
-    Height = 25
+    Left = 88
+    Top = 256
+    Width = 113
+    Height = 41
     Caption = 'btn1'
     TabOrder = 0
     OnClick = btn1Click

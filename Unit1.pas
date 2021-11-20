@@ -41,7 +41,6 @@ type
     procedure pnl4MouseLeave(Sender: TObject);
     procedure img1Click(Sender: TObject);
     procedure pnl7Click(Sender: TObject);
-    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 
   private
     { Private declarations }
@@ -73,18 +72,11 @@ begin
     MDIChildren[a].Close;
 end;
 
-procedure TForm1.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
-begin
-  Form1.Hide;
-  Form7.Show;
-
-end;
-
 procedure TForm1.FormCreate(Sender: TObject);
 begin
 
   grp1.Color := rgb(37, 38, 40);
-  pnl6.Color := rgb(37, 38, 40);
+
   pnl1.Color := rgb(37, 38, 40);
   pnl1.Font.Color := clWhite;
   pnl1.Font.Size := 12;
@@ -104,6 +96,13 @@ begin
   pnl5.Color := rgb(37, 38, 40);
   pnl5.Font.Color := clWhite;
   pnl5.Font.Size := 12;
+
+  pnl6.Color := rgb(37, 38, 40);
+
+  pnl7.Color := rgb(37, 38, 40);
+  pnl7.Font.Color := clWhite;
+  pnl7.Font.Size := 12;
+
 end;
 
 procedure TForm1.img1Click(Sender: TObject);
@@ -215,6 +214,7 @@ procedure TForm1.pnl7Click(Sender: TObject);
 begin
   Form7 := TForm7.Create(Form1);
   Form7.Show;
+  pnl7.Caption:='Pulpit';
 
 end;
 

@@ -17,7 +17,6 @@ object Form1: TForm1
   Position = poMainFormCenter
   Visible = True
   OnClose = FormClose
-  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13

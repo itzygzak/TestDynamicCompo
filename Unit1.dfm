@@ -20,6 +20,21 @@ object Form1: TForm1
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
+  object rzLbl1: TRzLabel
+    Left = 297
+    Top = 126
+    Width = 713
+    Height = 385
+    Caption = 'Przed przyst'#261'pieniem '#13#13' do pracy'#13#13'prosz'#281' si'#281' zalogowa'#263'.'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMenuHighlight
+    Font.Height = -64
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    LightTextStyle = True
+    TextStyle = tsRaised
+  end
   object spltVw1: TSplitView
     AlignWithMargins = True
     Left = 3
@@ -38,7 +53,6 @@ object Form1: TForm1
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitTop = 3
       object pnl4: TPanel
         Left = 0
         Top = 579
@@ -52,16 +66,12 @@ object Form1: TForm1
         OnClick = pnl4Click
         OnMouseLeave = pnl4MouseLeave
         OnMouseMove = pnl4MouseMove
-        ExplicitLeft = 2
-        ExplicitTop = 577
-        ExplicitWidth = 196
       end
       object pnl5: TPanel
         Left = 0
-        Top = 0
+        Top = 170
         Width = 200
         Height = 41
-        Align = alTop
         BevelOuter = bvNone
         Caption = 'Forma Dock'
         ParentBackground = False
@@ -69,11 +79,10 @@ object Form1: TForm1
         OnClick = pnl5Click
         OnMouseLeave = pnl5MouseLeave
         OnMouseMove = pnl5MouseMove
-        ExplicitTop = 8
       end
       object pnl3: TPanel
         Left = 0
-        Top = 82
+        Top = 41
         Width = 200
         Height = 41
         Align = alTop
@@ -84,13 +93,11 @@ object Form1: TForm1
         OnClick = pnl3Click
         OnMouseLeave = pnl3MouseLeave
         OnMouseMove = pnl3MouseMove
-        ExplicitLeft = 2
-        ExplicitTop = 138
-        ExplicitWidth = 196
+        ExplicitTop = 82
       end
       object pnl2: TPanel
         Left = 0
-        Top = 164
+        Top = 123
         Width = 200
         Height = 41
         Align = alTop
@@ -101,13 +108,11 @@ object Form1: TForm1
         OnClick = pnl2Click
         OnMouseLeave = pnl2MouseLeave
         OnMouseMove = pnl2MouseMove
-        ExplicitLeft = 2
-        ExplicitTop = 97
-        ExplicitWidth = 196
+        ExplicitTop = 164
       end
       object pnl1: TPanel
         Left = 0
-        Top = 123
+        Top = 82
         Width = 200
         Height = 41
         Align = alTop
@@ -118,13 +123,11 @@ object Form1: TForm1
         OnClick = pnl1Click
         OnMouseLeave = pnl1MouseLeave
         OnMouseMove = pnl1MouseMove
-        ExplicitLeft = 2
-        ExplicitTop = 56
-        ExplicitWidth = 196
+        ExplicitTop = 123
       end
       object pnl7: TPanel
         Left = 0
-        Top = 41
+        Top = 0
         Width = 200
         Height = 41
         Align = alTop
@@ -133,9 +136,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 5
         OnClick = pnl7Click
-        ExplicitLeft = 2
-        ExplicitTop = 15
-        ExplicitWidth = 196
+        ExplicitTop = 3
       end
     end
   end

@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.WinXCtrls, Vcl.ComCtrls, Vcl.Imaging.pngimage;
+  Vcl.WinXCtrls, Vcl.ComCtrls, Vcl.Imaging.pngimage, RzLabel;
 
 type
   TForm1 = class(TForm)
@@ -20,6 +20,7 @@ type
     pnl2: TPanel;
     pnl1: TPanel;
     pnl7: TPanel;
+    rzLbl1: TRzLabel;
     procedure FormCreate(Sender: TObject);
     procedure pnl1MouseLeave(Sender: TObject);
     procedure pnl2MouseLeave(Sender: TObject);
